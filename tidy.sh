@@ -25,4 +25,3 @@ sudo rm -f /EMPTY
 
 echo "==> Note the error from EMPTY is expected"
 
-sudo shutdown -h now
