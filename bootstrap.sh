@@ -13,11 +13,12 @@
 #> sudo sh bootstrap.sh
 
 sudo apt-get update -y 
+sudo apt-get dist-upgrade -y
 sudo apt-get install -y linux-headers-$(uname -r) build-essential dkms
 sudo apt-get install -y git
 sudo apt-get install -y openssh-server
 
-# Work out VirtualBox version
+# Work out VirtualBox version -- can only be done later
 # VBOX=$(VBoxClient --version | awk '{split($0,a,"r"); print a[1]}')
 VBOX='5.0.16'
 
@@ -34,10 +35,10 @@ wget https://raw.githubusercontent.com/jreades/GeoCUP-Vagrant/master/tidy.sh
 
 chmod +x sshconfig.sh tidy.sh
 sudo sh sshconfig.sh
+sudo sh qgisconfig.sh 
 sudo sh tidy.sh
 
-#sudo apt-get dist-upgrade -y
-sudo shutdown -r now 
+sudo shutdown -h now 
 
 # When the machine is shut down, we can now 
 # compress the VDI file to save additional 
