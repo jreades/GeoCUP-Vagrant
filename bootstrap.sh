@@ -17,7 +17,8 @@ sudo apt-get install -y linux-headers-$(uname -r) build-essential dkms
 sudo apt-get install -y git
 sudo apt-get install -y openssh-server
 
-# Work out VirtualBox version
+# Work out VirtualBox version -- doesn't
+# work on first go unfortunately...
 # VBOX=$(VBoxClient --version | awk '{split($0,a,"r"); print a[1]}')
 VBOX='5.0.16'
 
@@ -43,9 +44,12 @@ sudo shutdown -r now
 # compress the VDI file to save additional 
 # disk space.
 # Linux:
-#> vboxmanage modifyhd /path/to/thedisk.vdi --compact
+# $ vboxmanage modifyhd /path/to/thedisk.vdi --compact
 # Mac:
-#> VBoxManage modifyhd /path/to/thedisk.vdi --compact
+# $ VBoxManage modifyhd /path/to/thedisk.vdi --compact
 # Windows:
-#> VBoxManage.exe modifyhd c:\path\to\thedisk.vdi --compact
+# $ VBoxManage.exe modifyhd c:\path\to\thedisk.vdi --compact
+#
+# And if you're using a Vagrant distribution:
+# $ vagrant plugin install vagrant-vbguest
 
