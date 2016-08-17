@@ -38,7 +38,7 @@ sudo sh sshconfig.sh
 sudo sh tidy.sh
 
 #sudo apt-get dist-upgrade -y
-sudo shutdown -r now 
+sudo shutdown -h now 
 
 # When the machine is shut down, we can now 
 # compress the VDI file to save additional 
