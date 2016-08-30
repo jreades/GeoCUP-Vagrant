@@ -41,6 +41,7 @@ sudo sh sshconfig.sh
 sudo sh qgisconfig.sh 
 sudo sh tidy.sh
 
+#sudo apt-get dist-upgrade -y
 sudo shutdown -h now 
 
 # When the machine is shut down, we can now 
