@@ -6,6 +6,9 @@
 sudo sh -c 'echo "# QGIS Repositories" >> /etc/apt/sources.list'
 sudo sh -c 'echo "deb http://qgis.org/ubuntugis xenial main" >> /etc/apt/sources.list'  
 sudo sh -c 'echo "deb-src http://qgis.org/ubuntugis xenial main" >> /etc/apt/sources.list'  
+# Not a real fan of this next line
+# Needed for now since QGIS updates are way behind...
+#sudo sh -c 'echo "deb http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu xenial main" >> /etc/apt/sources.list'
 
 # Add the QGIS signing key so that apt-get
 # doesn't complain about missing public keys
@@ -18,5 +21,3 @@ gpg --export --armor 073D307A618E5811 | sudo apt-key add -
 sudo apt-get update 
 sudo apt-get install -y python-software-properties 
 sudo apt-get install -y qgis python-qgis python-qgis-common qgis-plugin-grass saga
-
-
