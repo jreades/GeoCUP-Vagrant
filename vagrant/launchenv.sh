@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export PATH="/home/vagrant/miniconda/bin:$PATH"
-source activate gds
+source activate spats
 
 if [[ ! -d /vagrant/notebooks ]]; then
     sudo -u vagrant mkdir /vagrant/notebooks
