@@ -18,6 +18,6 @@ Vagrant.configure("2") do |config|
     config.vm.network "forwarded_port", guest:8888, host:8888
 
     # Provision the box
-    config.vm.provision "shell", path: "bootstrap.sh"
+    config.vm.provision "shell", path: "bootstrap-vagrant.sh"
     config.vm.provision "shell", privileged: false, path: "launchenv.sh", run: "always"
 end
