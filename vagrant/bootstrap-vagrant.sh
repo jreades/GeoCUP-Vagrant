@@ -15,3 +15,6 @@ source ~/.bashrc
 chmod +x /vagrant/install.sh
 /vagrant/install.sh
 
+#wget http://darribas.org/gds15/content/infrastructure/install_gds_stack_unix.sh -O install_gds_stack_unix.sh
+#chmod +x install_gds_stack_unix.sh
+#./install_gds_stack_unix.sh

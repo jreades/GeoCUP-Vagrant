@@ -13,14 +13,17 @@
 #> sudo sh bootstrap.sh
 
 sudo apt-get update -y 
+sudo apt-get dist-upgrade -y
 sudo apt-get install -y linux-headers-$(uname -r) build-essential dkms
 sudo apt-get install -y git
 sudo apt-get install -y openssh-server
 
 # Work out VirtualBox version -- doesn't
-# work on first go unfortunately...
+# work on first go unfortunately... as 
+# VBox not yet installed. So currently 
+# has to be hard-coded.
 # VBOX=$(VBoxClient --version | awk '{split($0,a,"r"); print a[1]}')
-VBOX='5.0.16'
+VBOX='5.1.4'
 
 wget http://download.virtualbox.org/virtualbox/$VBOX/VBoxGuestAdditions_$VBOX.iso
 sudo mkdir /media/VBoxGuestAdditions
@@ -35,6 +38,7 @@ wget https://raw.githubusercontent.com/jreades/GeoCUP-Vagrant/master/tidy.sh
 
 chmod +x sshconfig.sh tidy.sh
 sudo sh sshconfig.sh
+sudo sh qgisconfig.sh 
 sudo sh tidy.sh
 
 #sudo apt-get dist-upgrade -y
